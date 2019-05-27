@@ -31,6 +31,7 @@ import ua.od.game.controller.RoomController;
 import ua.od.game.controller.UpgradeController;
 import ua.od.game.controller.UserController;
 import ua.od.game.controller.impl.AccountRoomControllerImpl;
+import ua.od.game.controller.impl.ResourceControllerImpl;
 import ua.od.game.controller.impl.RoomControllerImpl;
 import ua.od.game.controller.impl.UserControllerImpl;
 import ua.od.game.repository.dao.AccountAchievementDao;
@@ -51,6 +52,7 @@ import ua.od.game.repository.dao.RoomDao;
 import ua.od.game.repository.dao.UpgradeDao;
 import ua.od.game.repository.dao.UserDao;
 import ua.od.game.repository.dao.impl.AccountRoomDaoImpl;
+import ua.od.game.repository.dao.impl.ResourceDaoImpl;
 import ua.od.game.repository.dao.impl.RoomDaoImpl;
 import ua.od.game.repository.dao.impl.UserDaoImpl;
 import ua.od.game.service.AccountAchievementService;
@@ -156,7 +158,7 @@ public class AppContextConfig {
                     bindAsContract(Object.class).to(CardController.class);
                     bindAsContract(Object.class).to(MessageController.class);
                     bindAsContract(Object.class).to(NotificationController.class);
-                    bindAsContract(Object.class).to(ResourceController.class);
+                    bindAsContract(ResourceControllerImpl.class).to(ResourceController.class);
                     bindAsContract(Object.class).to(UpgradeController.class);
 
                     bindAsContract(UserServiceImpl.class).to(UserService.class);
@@ -174,7 +176,7 @@ public class AppContextConfig {
                     bindAsContract(Object.class).to(CardService.class);
                     bindAsContract(Object.class).to(MessageService.class);
                     bindAsContract(Object.class).to(NotificationService.class);
-                    bindAsContract(Object.class).to(ResourceService.class);
+                    bindAsContract(ResourceDaoImpl.class).to(ResourceService.class);
                     bindAsContract(Object.class).to(UpgradeService.class);
 
                     bindAsContract(UserDaoImpl.class).to(UserDao.class);
@@ -192,7 +194,7 @@ public class AppContextConfig {
                     bindAsContract(Object.class).to(CardDao.class);
                     bindAsContract(Object.class).to(MessageDao.class);
                     bindAsContract(Object.class).to(NotificationDao.class);
-                    bindAsContract(Object.class).to(ResourceDao.class);
+                    bindAsContract(ResourceDaoImpl.class).to(ResourceDao.class);
                     bindAsContract(Object.class).to(UpgradeDao.class);
                 }
             });
