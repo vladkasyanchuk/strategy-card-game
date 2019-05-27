@@ -20,6 +20,10 @@ public class ResourceDaoImplTest extends DbTest {
     public void getAllResourceListTest() {
         List<ResourceEntity> resources = resourceDao.getAllResourceList();
         Assert.assertNotNull(resources);
+<<<<<<< HEAD
         Assert.assertEquals(resources.size(), 3);
+=======
+        Assert.assertEquals(resources.size(),3);
+>>>>>>> 97beff14a81d7bc76edd4333b4acb687ed4c3d2e
     }
 }

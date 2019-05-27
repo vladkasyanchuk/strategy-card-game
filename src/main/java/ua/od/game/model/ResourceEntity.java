@@ -37,4 +37,5 @@ public class ResourceEntity {
     public void setDefaultNumber(Integer defaultNumber) {
         this.defaultNumber = defaultNumber;
     }
+
 }

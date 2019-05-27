@@ -4,7 +4,6 @@ import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.HandlerList;
 import org.eclipse.jetty.server.handler.ResourceHandler;
-import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -73,6 +72,7 @@ import ua.od.game.service.RoomService;
 import ua.od.game.service.UpgradeService;
 import ua.od.game.service.UserService;
 import ua.od.game.service.impl.AccountRoomServiceImpl;
+import ua.od.game.service.impl.ResourceServiceImpl;
 import ua.od.game.service.impl.RoomServiceImpl;
 import ua.od.game.service.impl.UserServiceImpl;
 
@@ -176,7 +176,11 @@ public class AppContextConfig {
                     bindAsContract(Object.class).to(CardService.class);
                     bindAsContract(Object.class).to(MessageService.class);
                     bindAsContract(Object.class).to(NotificationService.class);
+<<<<<<< HEAD
                     bindAsContract(ResourceDaoImpl.class).to(ResourceService.class);
+=======
+                    bindAsContract(ResourceServiceImpl.class).to(ResourceService.class);
+>>>>>>> 97beff14a81d7bc76edd4333b4acb687ed4c3d2e
                     bindAsContract(Object.class).to(UpgradeService.class);
 
                     bindAsContract(UserDaoImpl.class).to(UserDao.class);

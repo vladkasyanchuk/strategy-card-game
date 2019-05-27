@@ -37,4 +37,5 @@ public class ResourceDto {
     public void setDefaultNumber(Integer defaultNumber) {
         this.defaultNumber = defaultNumber;
     }
+
 }

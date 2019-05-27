@@ -1,7 +1,6 @@
 package ua.od.game.repository.dao.impl;
 
 import ua.od.game.model.ResourceEntity;
-import ua.od.game.model.RoomEntity;
 import ua.od.game.repository.dao.ResourceDao;
 import ua.od.game.repository.helper.SqlHelper;
 
@@ -10,6 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ResourceDaoImpl implements ResourceDao {
+
     private static final String GET_RESOURCE_LIST_QUERY = "Select * from Resource";
 
     @Override
